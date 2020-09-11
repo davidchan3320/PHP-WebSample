@@ -1,0 +1,9 @@
+https://api.spoonacular.com/recipes/random?number=100&tags=vegetarian,dessert,
+
+https://api.spoonacular.com/recipes/716429/information?apiKey=YOUR-API-KEY&includeNutrition=true. 
+
+2032234a3c364f9bb75d85b964473a33 
+
+https://api.spoonacular.com/recipes/716429/information?apiKey=2032234a3c364f9bb75d85b964473a33&includeNutrition=true
+
+https://api.spoonacular.com/recipes/random?apiKey=2032234a3c364f9bb75d85b964473a33&includeNutrition=true&number=30&tags=vegetarian,dessert,Burgers,Pasta,beef,curry,soup

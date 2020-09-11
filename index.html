@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- BackToTop -->
+    <a id="button"></a>
+    <!-- BackToTop -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container-lg">
+            <a class="navbar-brand" href="index.html">Song Library</a>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-lg main">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" onclick="reset()" type="button">Reset</button>
+            </div>
+            <input type="text" class="form-control" id="song_name" placeholder="Enter song name, e.g. numb">
+            <!-- <input type="text" class="form-control" id="artist_name" placeholder="Enter artist name"> -->
+            <div class="input-group-append" id="button-addon4">
+                <!-- <select class="custom-select select" id="cluster"></select> -->
+
+                <button class="btn btn-outline-secondary" id="btn" onclick="Search(1)">Search</button>
+            </div>
+        </div>
+        <hr>
+        <!-- show how many docs in each page -->
+        <div class="row">
+            <div id="count" class="col-sm-10">
+            
+            </div>
+            <div class="col-sm-2">
+                <div class="btn-group" role="group">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#create">
+                        New Song
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- show how many docs in each page -->
+        <br>
+        <!-- show all docs in this div -->
+        <div class="accordion" id="show"></div>
+        <!-- show all docs in this div -->
+        <br>
+        <ul class="pagination justify-content-center">
+            <li id="btn_prev" class="page-item">
+                <a class="page-link" href="javascript:prevPage()" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item disabled"><a id="page" class="page-link" href="#">1</a></li>
+            <li id="btn_next" class="page-item">
+                <a class="page-link" href="javascript:nextPage()">Next</a>
+            </li>
+        </ul>
+        <br>
+    </main>
+    <footer>
+        <div class="container-lg footer">
+            Present by songs Library
+        </div>
+    </footer>
+
+    <div id="modalShow"></div>
+    <div class="modal fade" id="create">
+        <div class="modal-dialog modal-xl modal-dialog-centered" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="createTitle">New Song</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group list-group">
+                        <li class="list-group-item" style="background-color: #f5f5f0">Song</li>
+                        <input class="list-group-item" id="cSong" required>
+                    </ul>
+                    <ul class="list-group list-group">
+                        <li class="list-group-item" style="background-color: #f5f5f0">Artist</li>
+                        <input class="list-group-item" id="cArtist" required>
+                    </ul>
+                    <ul class="list-group list-group">
+                        <li class="list-group-item" style="background-color: #f5f5f0">Album</li>
+                        <input class="list-group-item" id="cAlbum" required>
+                    </ul>
+                    <ul class="list-group list-group">
+                        <li class="list-group-item" style="background-color: #f5f5f0">Album Image Url</li>
+                        <input class="list-group-item" id="cImage" required>
+                    </ul>
+                    <ul class="list-group list-group">
+                        <li class="list-group-item" style="background-color: #f5f5f0">Preview Audio Url</li>
+                        <input class="list-group-item" id="cAudio" required>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="createData()">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- start of other lib -->
+<script src="./Res/Lib/jquery/jquery-3.4.1.js"></script>
+<script src="./Res/Lib/bootstrap4.4.1-dist/js/bootstrap.js"></script>
+<link rel="stylesheet" href="./Res/Lib/bootstrap4.4.1-dist/css/bootstrap.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- end of other lib -->
+<!-- start of own code -->
+<script src="./JS/backToTop.js"></script>
+<script src="./JS/index.js"></script>
+<!-- <script src="./JS/test.js"></script> -->
+<!-- end of own code -->
+<!-- start of css file -->
+<link rel="stylesheet" href="./CSS/backToTop.css">
+<link rel="stylesheet" href="./CSS/index.css">
+<!-- end of css file -->
+
+</html>
