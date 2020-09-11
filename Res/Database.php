@@ -9,7 +9,7 @@ class dbManager
 
     function __construct()
     {
-        $this->path = "mongodb+srv://Admin:AxSBIxSCnPwKAmXG@democluster-rpx7e.azure.mongodb.net/test?retryWrites=true&w=majority";
+        $this->path = "mongodb+srv://Admin:<password>@democluster-rpx7e.azure.mongodb.net/test?retryWrites=true&w=majority";
         $this->db = new MongoDB\Client($this->path);
     }
 
